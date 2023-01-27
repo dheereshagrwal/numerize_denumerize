@@ -1,5 +1,5 @@
 
-def numerize(number, decimal_points=1):
+def numerize(number, decimal_points=2):
     if not isinstance(number, (int, float)):
         raise ValueError("Input must be a number.")
     if not isinstance(decimal_points, int) or decimal_points < 0:

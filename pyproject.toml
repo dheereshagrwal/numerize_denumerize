@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "numerize_denumerize"
-version = "0.0.4"
+version = "0.0.6"
 authors = [
   { name="Dheeresh Agarwal", email="da11@iitbbs.ac.in" },
 ]

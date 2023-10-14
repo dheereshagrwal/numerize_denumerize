@@ -1,5 +1,5 @@
 
-def numerize(number, decimal_points=2):
+def numerize(number, decimal_points=2,currency=None):
     if not isinstance(number, (int, float)):
         raise ValueError("Input must be a number.")
     if not isinstance(decimal_points, int) or decimal_points < 0:
@@ -23,6 +23,6 @@ def numerize(number, decimal_points=2):
     for suffix in suffixes:
         if number >= 10**suffix:
             number /= 10**suffix
-            return f"{round(number, decimal_points)}{suffixes[suffix]}"
+            return f"{round(number, decimal_points)}{suffixes[suffix]}" if currency is None else f"{currency}{round(number, decimal_points)}{suffixes[suffix]}"
     return round(number, decimal_points)
 

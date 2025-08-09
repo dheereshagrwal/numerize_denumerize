@@ -1,23 +1,54 @@
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
 [project]
 name = "numerize_denumerize"
-version = "0.0.6"
-authors = [
-  { name="Dheeresh Agarwal", email="da11@iitbbs.ac.in" },
-]
-description = "A simple and better version of numerize package that also denumerizes"
+version = "0.0.7"
+authors = [{ name = "Dheeresh Agarwal", email = "da11@iitbbs.ac.in" }]
+description = "A simple and better version of numerize that also denumerizes: human-friendly numerize (1_234_000 -> 1.23M) and precise denumerize ($1.23M -> 1230000) with large-scale suffix support up to 10^42."
 readme = "README.md"
 requires-python = ">=3.9"
+keywords = [
+  "numerize",
+  "denumerize",
+  "abbreviate",
+  "human readable numbers",
+  "format numbers",
+  "parse numbers",
+  "k m b",
+  "metric suffix",
+]
+license = { text = "MIT" }
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+  "Natural Language :: English",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/dheereshagrwal/numerize_denumerize"
-"Bug Tracker" = "https://github.com/dheereshagrwal/numerize_denumerize/issues"
-[tool.poetry.dependencies]
-pytest = "^8.4.1"
+Homepage = "https://github.com/dheereshagrwal/numerize_denumerize"
+Issues = "https://github.com/dheereshagrwal/numerize_denumerize/issues"
+Source = "https://github.com/dheereshagrwal/numerize_denumerize"
+Changelog = "https://github.com/dheereshagrwal/numerize_denumerize/releases"
+
+[project.optional-dependencies]
+tests = ["pytest>=8.4"]
+
+[tool.hatch.build]
+include = [
+  "src/numerize_denumerize/**/*.py",
+  "src/numerize_denumerize/py.typed",
+]

@@ -9,7 +9,7 @@ authors = [
 ]
 description = "A simple and better version of numerize package that also denumerizes"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -19,3 +19,5 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/dheereshagrwal/numerize_denumerize"
 "Bug Tracker" = "https://github.com/dheereshagrwal/numerize_denumerize/issues"
+[tool.poetry.dependencies]
+pytest = "^8.4.1"
